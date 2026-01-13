@@ -30,7 +30,57 @@
         <div class="container">
             <section class="converter-section" id="length">
                 <h2>Length Converter</h2>
-                <p>Coming soon...</p>
+                <div class="converter-container">
+                    <div class="converter-input-group">
+                        <label for="lengthFromValue">From:</label>
+                        <div class="input-wrapper">
+                            <input 
+                                type="number" 
+                                id="lengthFromValue" 
+                                class="converter-input" 
+                                placeholder="Enter value"
+                                value="1"
+                            >
+                            <select id="lengthFromUnit" class="converter-select">
+                                <option value="mm">Millimeter (mm)</option>
+                                <option value="cm">Centimeter (cm)</option>
+                                <option value="m" selected>Meter (m)</option>
+                                <option value="km">Kilometer (km)</option>
+                                <option value="inch">Inch (in)</option>
+                                <option value="foot">Foot (ft)</option>
+                                <option value="yard">Yard (yd)</option>
+                                <option value="mile">Mile (mi)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="converter-divider">
+                        <button class="swap-btn" id="lengthSwapBtn" title="Swap units">⇅</button>
+                    </div>
+
+                    <div class="converter-input-group">
+                        <label for="lengthToValue">To:</label>
+                        <div class="input-wrapper">
+                            <input 
+                                type="number" 
+                                id="lengthToValue" 
+                                class="converter-input" 
+                                placeholder="Result"
+                                readonly
+                            >
+                            <select id="lengthToUnit" class="converter-select">
+                                <option value="mm">Millimeter (mm)</option>
+                                <option value="cm">Centimeter (cm)</option>
+                                <option value="m" selected>Meter (m)</option>
+                                <option value="km">Kilometer (km)</option>
+                                <option value="inch">Inch (in)</option>
+                                <option value="foot">Foot (ft)</option>
+                                <option value="yard">Yard (yd)</option>
+                                <option value="mile">Mile (mi)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <section class="converter-section hidden" id="weight">

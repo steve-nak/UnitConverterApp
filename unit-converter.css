@@ -168,3 +168,154 @@ body {
 .hidden {
     display: none;
 }
+
+/* Converter Styles */
+.converter-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 1.5rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.converter-input-group {
+    flex: 1;
+    min-width: 320px;
+}
+
+.converter-input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    font-size: 0.95rem;
+}
+
+.input-wrapper {
+    display: flex;
+    gap: 0.5rem;
+    align-items: stretch;
+}
+
+.converter-input {
+    flex: 1.5;
+    min-width: 120px;
+    padding: 0.75rem;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.converter-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+.converter-input:read-only {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+}
+
+.converter-select {
+    flex: 1;
+    min-width: 150px;
+    padding: 0.75rem;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: white;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.converter-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+.converter-divider {
+    display: flex;
+    align-items: center;
+    padding-bottom: 0;
+}
+
+.swap-btn {
+    padding: 0.75rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.swap-btn:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.swap-btn:active {
+    transform: scale(0.95);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .nav-link {
+        border-bottom: none;
+        border-left: 3px solid transparent;
+        padding: 0.8rem 1rem;
+    }
+
+    .nav-link:hover {
+        border-left-color: var(--primary-color);
+        border-bottom-color: transparent;
+    }
+
+    .nav-link.active {
+        border-left-color: var(--primary-color);
+        border-bottom-color: transparent;
+    }
+
+    .container {
+        padding: 0 0.5rem;
+    }
+
+    .converter-section {
+        padding: 1.5rem;
+    }
+
+    .converter-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .converter-input-group {
+        min-width: 100%;
+    }
+
+    .input-wrapper {
+        flex-direction: column;
+    }
+
+    .converter-select {
+        min-width: 100%;
+    }
+
+    .converter-divider {
+        order: 2;
+    }
+}
