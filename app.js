@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeNavigation();
     initializeLengthConverter();
     initializeTemperatureConverter();
+    initializeCurrencyConverter();
 });
 
 // Export for testing

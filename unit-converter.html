@@ -20,6 +20,7 @@
         <ul class="nav-list">
             <li><a href="#length" class="nav-link active" data-category="length">Length</a></li>
             <li><a href="#temperature" class="nav-link" data-category="temperature">Temperature</a></li>
+            <li><a href="#currency" class="nav-link" data-category="currency">Currency</a></li>
         </ul>
     </nav>
 
@@ -126,6 +127,54 @@
                 </div>
             </section>
 
+            <section class="converter-section hidden" id="currency">
+                <h2>Currency Converter</h2>
+                <p class="currency-note">Real-time exchange rates</p>
+                <div class="converter-container">
+                    <div class="converter-input-group">
+                        <label for="currencyFromValue">From:</label>
+                        <div class="input-wrapper">
+                            <input 
+                                type="number" 
+                                id="currencyFromValue" 
+                                class="converter-input" 
+                                placeholder="Enter amount"
+                                value="1"
+                            >
+                            <select id="currencyFromUnit" class="converter-select">
+                                <option value="USD" selected>US Dollar (USD)</option>
+                                <option value="EUR">Euro (EUR)</option>
+                                <option value="GBP">British Pound (GBP)</option>
+                                <option value="CHF">Swiss Franc (CHF)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="converter-divider">
+                        <button class="swap-btn" id="currencySwapBtn" title="Swap currencies">⇅</button>
+                    </div>
+
+                    <div class="converter-input-group">
+                        <label for="currencyToValue">To:</label>
+                        <div class="input-wrapper">
+                            <input 
+                                type="number" 
+                                id="currencyToValue" 
+                                class="converter-input" 
+                                placeholder="Result"
+                                readonly
+                            >
+                            <select id="currencyToUnit" class="converter-select">
+                                <option value="USD">US Dollar (USD)</option>
+                                <option value="EUR" selected>Euro (EUR)</option>
+                                <option value="GBP">British Pound (GBP)</option>
+                                <option value="CHF">Swiss Franc (CHF)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </div>
     </main>
 
@@ -140,6 +189,7 @@
     <script src="navigation.js"></script>
     <script src="converters/length-converter.js"></script>
     <script src="converters/temperature-converter.js"></script>
+    <script src="converters/currency-converter.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
